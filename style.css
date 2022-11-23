@@ -1,13 +1,6 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
 *, :after, :before { box-sizing: border-box; }
 
-/*
- BARVY
- pozadi     #f5f5f5
- Jedeme retro cernobile, dnes barvy nepotrebujeme.
-*/
-
-
 body {
     margin: 0;
     padding: 0;
@@ -22,22 +15,121 @@ body {
 
 .titulek {
     font-family: 'Raleway', serif;
+    margin: 0;
+}
+
+header {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(142,142,142,0.3) 100%), url('images/island-hlavicka.jpg');
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.autor {
+    opacity: 0.8;
+}
+
+.autor::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* MENU */
+.menu {
+    padding: 0px;
+}
+
+.menu li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(166, 166, 164);
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 5px;
+    font-family: 'Raleway', serif;
+    width: 90%;
+    margin: auto;
+}
+
+/* OBSAH */
+.obsah {
+    box-shadow: 0 8px 20px -20px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.popisek {
+    font-size: 12px;
+    color:rgb(166, 166, 164);
+    margin: 0px;
+    text-align: center;
+}
+
+.popisek a {
+    color:rgb(166, 166, 164);
+}
+
+h2 {
+    font-family: 'Raleway', serif;
+    margin: 40px 20px 60px 20px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: rgb(92, 156, 218);
 }
 
 
-/* MENU */
-
-
-
-
-/* OBSAH */
-
-
-
-
 /* FOTOGALERIE */
+.galerie img {
+    width: 100%;
+    display: block;
+}
 
+.galerie p {
+    font-weight: bold;
+}
 
+.popisek {
+    display: block;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.popisek-copy {
+    font-weight: normal;
+}
 
 
 /* PATICKA */
+
+footer {
+    background-color: rgb(245, 245, 245);
+    color: rgb(169, 169, 169);
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: rgb(169, 169, 169);
+    font-weight: bold;
+}
