@@ -10,11 +10,11 @@ body {
     line-height: 1.6;
 }
 
-
 /* HLAVICKA */
 
 .titulek {
     font-family: 'Raleway', serif;
+    font-size: 45px;
     margin: 0;
 }
 
@@ -24,11 +24,14 @@ header {
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 30px 0px;
 }
 
 .autor {
     opacity: 0.8;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .autor::before {
@@ -37,6 +40,22 @@ header {
     width: 80px;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.7);
+    margin: auto;
+}
+
+@media (min-width: 1000px) {
+    .titulek {
+        font-size: 60px;
+    }
+
+    header {
+        height: 450px;
+    }
+
+    .perex {
+        width: 50vw;
+        margin: auto;
+    }
 }
 
 /* MENU */
@@ -54,11 +73,55 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     color: rgb(166, 166, 164);
-    border-bottom: 1px solid rgb(236, 236, 236);
+    border-bottom: 1px solid rgb(220, 220, 220);
     padding: 5px;
     font-family: 'Raleway', serif;
     width: 90%;
     margin: auto;
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    .menu {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid rgb(220, 220, 220);
+        margin: 30px 0;
+    }
+
+    .menu li {
+        flex-basis: 150px;
+    }
+
+    .menu a {
+        border: none;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .menu-uvod-pc {
+        display: flex;
+        width: 100%;
+    }
+
+    .menu {
+        width: 30%;
+        margin: 30px;
+    }
+
+    .menu li {
+        text-align: left;
+    }
+
+    .menu a:hover{
+        color: black;
+    }
+
+    .uvod {
+        width: 70%;
+    }
 }
 
 /* OBSAH */
@@ -87,17 +150,56 @@ img {
 
 h2 {
     font-family: 'Raleway', serif;
-    margin: 40px 20px 60px 20px;
+    margin: 20px 20px 30px 20px;
 }
 
 h2::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 65px;
     height: 4px;
     background-color: rgb(92, 156, 218);
+    margin: 20px -20px;
 }
 
+@media (min-width: 500px) and 
+(max-width: 1000px), 
+(min-width: 1000px) {
+    .obrazek-v-obsahu {
+        position: relative;
+    }
+
+    .obrazek-v-obsahu .popisek {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        color:white;
+        padding: 0px;
+    }
+
+    .obrazek-v-obsahu .popisek a {
+        color: white;
+    }
+}
+
+@media (min-width: 1000px) {
+    .obsah {
+        width: 60vw;
+        margin: auto;
+        background-color: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        margin-top: -120px;
+    }
+
+    #proc p {
+        width: 70%;
+    }
+
+    #co-videt p {
+        width: 70%;
+        margin-left: 25%;
+    }
+}
 
 /* FOTOGALERIE */
 .galerie img {
@@ -109,16 +211,68 @@ h2::after {
     font-weight: bold;
 }
 
-.popisek {
+.galerie .popisek {
     display: block;
     padding-bottom: 20px;
     padding-top: 10px;
 }
 
-.popisek-copy {
+.galerie .popisek-copy {
+    display: block;
     font-weight: normal;
 }
 
+@media (min-width: 500px) and (max-width: 1000px) {
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .foto {
+        width: 50%;
+    }
+
+    .galerie .popisek, 
+    .galerie .popisek-copy {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .foto {
+        width: calc(100%/3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .foto img {
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .galerie .popisek {
+        width: 100%;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: 0.3s;
+        position: absolute;
+    }
+    
+    .foto:hover .popisek {
+        transform: translateY(-100%);
+    }
+
+    .foto:hover img {
+        transform: scale(1.2);
+    }
+}
 
 /* PATICKA */
 
@@ -127,9 +281,17 @@ footer {
     color: rgb(169, 169, 169);
     font-size: 12px;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 footer a {
     color: rgb(169, 169, 169);
     font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+    footer p {
+        width: 60vw;
+        margin: auto;
+    }
 }
