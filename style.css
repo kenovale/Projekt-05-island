@@ -103,11 +103,12 @@ header {
 @media (min-width: 1000px) {
     .menu-uvod-pc {
         display: flex;
+        justify-content: space-around;
         width: 100%;
     }
 
     .menu {
-        width: 30%;
+        width: 25%;
         margin: 30px;
     }
 
@@ -119,8 +120,8 @@ header {
         color: black;
     }
 
-    .uvod {
-        width: 70%;
+    #uvod {
+        width: 75%;
     }
 }
 
@@ -184,7 +185,7 @@ h2::after {
 
 @media (min-width: 1000px) {
     .obsah {
-        width: 60vw;
+        width: 70vw;
         margin: auto;
         background-color: white;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -263,6 +264,7 @@ h2::after {
         background-color: rgba(0, 0, 0, 0.7);
         transition: 0.3s;
         position: absolute;
+        padding: 10px;
     }
     
     .foto:hover .popisek {
@@ -291,7 +293,7 @@ footer a {
 
 @media (min-width: 1000px) {
     footer p {
-        width: 60vw;
+        width: 70vw;
         margin: auto;
     }
 }
